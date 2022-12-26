@@ -1,0 +1,4 @@
+Target to trigger with balls
+Door unlock when the targets are all hit
+Endpoint
+Win screen
