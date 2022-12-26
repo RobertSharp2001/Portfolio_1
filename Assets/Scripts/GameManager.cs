@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour{
     public static AudioSource barrelSounds;
     public static AudioSource coinSounds;
     public static AudioSource checkpointSounds;
+    public static AudioSource targetSounds;
     public static GameObject player;
 
     public void Start(){
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour{
         barrelSounds = GameObject.FindGameObjectWithTag("Barrel Audio").GetComponent<AudioSource>();
         coinSounds = GameObject.FindGameObjectWithTag("Coin Audio").GetComponent<AudioSource>();
         checkpointSounds = GameObject.FindGameObjectWithTag("Checkpoint Audio").GetComponent<AudioSource>();
+        targetSounds = GameObject.FindGameObjectWithTag("Target Audio").GetComponent<AudioSource>();
     }
 
     public void Update(){
@@ -47,6 +49,10 @@ public class GameManager : MonoBehaviour{
     public static void updateCheckpoint(Transform newRespawn){
         respawnPoint = newRespawn;
         checkpointSounds.Play();
+    }
+
+    public static void updateTarget(){
+        targetSounds.Play();
     }
 
 }
