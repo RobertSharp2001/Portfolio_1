@@ -33,6 +33,10 @@ public class GameManager : MonoBehaviour{
     public void Update(){
         coinsText.text = "x " + coins.ToString();
         ballsText.text = "x " + player.GetComponent<ThrowingBalls>().balls.ToString();
+
+        if (Input.GetKey("escape")){
+            Application.Quit();
+        }
         //Debug.Log(respawnPoint);
     }
 
